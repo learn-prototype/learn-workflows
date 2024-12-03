@@ -1,0 +1,12 @@
+name: Checkout Using Action
+on: [push]
+jobs:
+  checkout-and-display-files-using-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Files Before Action
+        run: ls -a
+      - name: Checkout GIT Repo using Action
+        uses: actions/checkout@v3
+      - name: List Files After
+        run: ls -a
