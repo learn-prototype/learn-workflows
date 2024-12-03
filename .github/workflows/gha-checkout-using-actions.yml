@@ -1,15 +1,12 @@
-name: Checkout Example with Actions
+name: Checkout Using Action
 on: [push]
 jobs:
-  checkout-using-actions:
+  checkout-and-display-files-using-action:
     runs-on: ubuntu-latest
     steps:
-      - name: List Files Before
+      - name: List Files Before Action
         run: ls -a
-      - name: Checkout Using Action
-        id: greet
-        uses: actions/hello-world-javascript-action@main
-        with:
-          who-to-greet: Amey
-      - name: Log Greeting Time
-        run: echo "${{ steps.greet.outputs.time }}"
+      - name: Checkout GIT Repo using Action
+        uses: action/checkout@v3
+      - name: List Files After
+        run: ls -a

@@ -1,0 +1,15 @@
+name: Greet Sample with Actions
+on: [push]
+jobs:
+  greet-using-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Files Before
+        run: ls -a
+      - name: Greet Using Action
+        id: greet
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: Amey
+      - name: Log Greeting Time
+        run: echo "${{ steps.greet.outputs.time }}"
