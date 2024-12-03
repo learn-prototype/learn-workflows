@@ -1,7 +1,7 @@
 name: List Files and Checkout
 on: [push]
 jobs:
-  checkout-and-display-files:
+  checkout-using-actions:
     runs-on: ubuntu-latest
     steps:
       - name: List Files Before
