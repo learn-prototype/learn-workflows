@@ -1,4 +1,4 @@
-name: List Files and Checkout
+name: Checkout Example with Actions
 on: [push]
 jobs:
   checkout-using-actions:
