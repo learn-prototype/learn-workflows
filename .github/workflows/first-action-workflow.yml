@@ -22,6 +22,6 @@ jobs:
       - name: echo a string
         run: write-output "Hello Windows Command"
       - name: Error Step
-        run: doesnotexits
+        run: write-output "Failed"
 
 
