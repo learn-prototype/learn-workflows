@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setting error message
-        run: echo "::error:: Semicolon Missing"
+        run: echo "::error::Semicolon Missing"
       - name: setting error message with params
         run: echo "::error, title=Error with Params, file=test.js, line=2, endLine=3, col=5, endColumn=6::Missing Semicolon"
       - name: setting Debug message with params
@@ -15,6 +15,6 @@ jobs:
       - name: setting Notice message with params
         run: echo "::notice, title=Notice with Params, file=test.js, line=2, endLine=3, col=5, endColumn=6::Missing Semicolon"
       - name: Masking Value
-        run: echo "::add-mask:: Secret"
+        run: echo "::add-mask::Secret"
       - name: Echo Masking Value
         run: echo "Secret"
