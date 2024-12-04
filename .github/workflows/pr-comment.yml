@@ -2,7 +2,6 @@ name: PR-Comment
 on:
   pull_request_target:
     types: [opened]
-
 jobs:
   PR-Add-Comment:
     runs-on: ubuntu-latest
@@ -12,8 +11,8 @@ jobs:
         with:
           script: |
             github.rest.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: context.issue.number,
-            body: "Thanks for Contribution",
-           });
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: "Thanks for Contribution",
+            });
